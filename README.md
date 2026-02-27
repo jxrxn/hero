@@ -1,16 +1,162 @@
-# hero
+# 🦸‍♂️ HeroDex 3000
 
-A new Flutter project.
+> A stable cross-platform coordination system for a world rebuilding
+> after invasion.
 
-## Getting Started
+HeroDex 3000 is a Flutter application built with a strong focus on:
 
-This project is a starting point for a Flutter application.
+-   Stability
+-   Clean architecture
+-   Defensive programming
+-   User consent & privacy
 
-A few resources to get you started if this is your first Flutter project:
+The app runs on mobile, tablet and web and starts with:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+``` bash
+flutter run
+```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+------------------------------------------------------------------------
+
+# 🧱 Architecture
+
+The project follows Separation of Concerns:
+
+lib/ ├── core/ → business logic (combat, utilities) ├── data/ → models,
+API client, repositories ├── presentation → UI, Cubits, routing
+
+State management: **Cubit (flutter_bloc)**\
+Navigation: **go_router**\
+Backend: **Firebase (Auth, Firestore, Crashlytics, Analytics)**
+
+Business logic is isolated from UI and is fully testable.
+
+------------------------------------------------------------------------
+
+# 🔐 Onboarding & Privacy
+
+On first launch, users must explicitly choose:
+
+-   Analytics: Yes / No\
+-   Crashlytics: Yes / No
+
+If declined, those services are fully disabled at runtime.
+
+Firebase initialization respects user consent immediately during app
+startup.
+
+------------------------------------------------------------------------
+
+# 🔍 Search
+
+-   Debounced API search\
+-   Defensive parsing of API data\
+-   Card UI with image fallback\
+-   Save/remove heroes\
+-   Detail view
+
+The app never crashes on:
+
+-   null values\
+-   malformed API responses\
+-   network failure
+
+All API calls are wrapped in try/catch with controlled UI states.
+
+------------------------------------------------------------------------
+
+# 🏠 Home
+
+Displays:
+
+-   Number of saved characters\
+-   Combined strength\
+-   Dynamic war status
+
+Values update reactively from local and remote data.
+
+------------------------------------------------------------------------
+
+# ⚔ Combat System
+
+Each hero's **Attack** and **Defense** are calculated dynamically from
+their powerstats using weighted formulas.
+
+Before calculation, all stats are sanitized using:
+
+``` dart
+static int safeStat(dynamic v, {int max = 999})
+```
+
+This ensures:
+
+-   null safety
+-   invalid input protection
+-   value clamping
+-   consistent integer parsing
+-   no crashes from malformed API data
+
+------------------------------------------------------------------------
+
+## 🗡 Attack Formula
+
+Attack is calculated using:
+
+Attack = (strength \* 0.35) + (power \* 0.30) + (combat \* 0.20) +
+(speed \* 0.15)
+
+------------------------------------------------------------------------
+
+## 🛡 Defense Formula
+
+Defense is calculated using:
+
+Defense = (durability \* 0.40) + (intelligence \* 0.25) + (combat \*
+0.20) + (speed \* 0.15)
+
+------------------------------------------------------------------------
+
+# 🧪 Testing
+
+Unit tests included for:
+
+-   normalizeAlign (alignment classification)
+-   PowerStats.safeStat (defensive stat parsing)
+
+Run tests with:
+
+``` bash
+flutter test
+```
+
+------------------------------------------------------------------------
+
+# 🛡 Stability Strategy
+
+Implemented through:
+
+-   Defensive null checks
+-   Safe stat parsing
+-   Exception wrapping
+-   Controlled async flows
+-   Debounced API calls
+-   Image fallback builders
+-   Consent-aware Firebase initialization
+
+------------------------------------------------------------------------
+
+# 👨‍💻 Built by
+
+\[JXRXN\]\
+HFL25-2\
+2026
+
+------------------------------------------------------------------------
+
+# 🌍 Final Statement
+
+Even when the network fails.\
+Even when data is malformed.\
+Even when the world shakes.
+
+HeroDex remains stable.
