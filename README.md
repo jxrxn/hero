@@ -1,3 +1,8 @@
+
+<img width="1024" height="1024" alt="app_icon" src="https://github.com/user-attachments/assets/78a8586c-446b-4428-950a-e7084c01527e" />
+
+
+
 # 🦸‍♂️ HeroDex 3000
 
 > A stable cross-platform coordination system for a world rebuilding
