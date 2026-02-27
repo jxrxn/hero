@@ -101,19 +101,19 @@ This ensures:
 ## 🗡 Attack Formula
 
 Attack is calculated using:
-
+```
 Attack = (strength \* 0.35) + (power \* 0.30) + (combat \* 0.20) +
 (speed \* 0.15)
-
+```
 ------------------------------------------------------------------------
 
 ## 🛡 Defense Formula
 
 Defense is calculated using:
-
+```
 Defense = (durability \* 0.40) + (intelligence \* 0.25) + (combat \*
 0.20) + (speed \* 0.15)
-
+```
 ------------------------------------------------------------------------
 
 # 🧪 Testing
