@@ -36,12 +36,12 @@ flutter run --dart-define=SUPERHERO_TOKEN=YOUR_TOKEN
 ```
 
 Examples:
-# Web
+Web
 ```bash
 flutter run -d chrome --dart-define=SUPERHERO_TOKEN=YOUR_TOKEN
 ```
 
-# iOS simulator
+iOS simulator
 ```bash
 flutter run -d "iPhone 16e" --dart-define=SUPERHERO_TOKEN=YOUR_TOKEN
 ```
