@@ -151,8 +151,11 @@ This ensures:
 
 Attack is calculated using:
 ```
-Attack = (strength \* 0.35) + (power \* 0.30) + (combat \* 0.20) +
-(speed \* 0.15)
+Attack =  
+(Strength × 0.35)  
++ (Power × 0.35)  
++ (Combat × 0.20)  
++ (Speed × 0.10)  
 ```
 ------------------------------------------------------------------------
 
@@ -160,8 +163,11 @@ Attack = (strength \* 0.35) + (power \* 0.30) + (combat \* 0.20) +
 
 Defense is calculated using:
 ```
-Defense = (durability \* 0.40) + (intelligence \* 0.25) + (combat \*
-0.20) + (speed \* 0.15)
+Defense =  
+(Durability × 0.50)  
++ (Speed × 0.20)  
++ (Intelligence × 0.20)  
++ (Combat × 0.10)  
 ```
 ------------------------------------------------------------------------
 
