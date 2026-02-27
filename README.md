@@ -15,10 +15,35 @@ HeroDex 3000 is a Flutter application built with a strong focus on:
 -   Defensive programming
 -   User consent & privacy
 
-The app runs on mobile, tablet and web and starts with:
+## Run the app
 
-``` bash
-flutter run
+HeroDex 3000 runs on **mobile**, **tablet**, and **web**.
+
+### 1) Install dependencies
+
+```bash
+flutter pub get
+```
+
+2) Provide your Superhero API key
+
+Search uses the Superhero API. You need an API key (token).
+
+We inject it at build time using Flutter’s recommended --dart-define:
+
+```bash
+flutter run --dart-define=SUPERHERO_TOKEN=YOUR_TOKEN
+```
+
+Examples:
+# Web
+```bash
+flutter run -d chrome --dart-define=SUPERHERO_TOKEN=YOUR_TOKEN
+```
+
+# iOS simulator
+```bash
+flutter run -d "iPhone 16e" --dart-define=SUPERHERO_TOKEN=YOUR_TOKEN
 ```
 
 ------------------------------------------------------------------------
