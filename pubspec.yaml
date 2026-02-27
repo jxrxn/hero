@@ -1,0 +1,51 @@
+name: hero
+description: "Hero Flutter project"
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.10.4
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  go_router: ^14.6.0
+  flutter_bloc: ^8.1.6
+  equatable: ^2.0.5
+  get_it: ^7.7.0
+  firebase_core: ^4.3.0
+  firebase_auth: ^6.1.3
+  async: ^2.13.0
+  firebase_analytics: ^12.1.1
+  shared_preferences: ^2.5.4
+  firebase_crashlytics: ^5.0.7
+  http: ^1.6.0
+  cloud_firestore: ^6.1.2
+  flutter_dotenv: ^5.1.0   # <-- här
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  flutter_launcher_icons: ^0.13.1
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - .env   # <-- VIKTIGT
+    - assets/branding/app_icon.png
+    - assets/branding/onboarding_bg.png
+    - assets/branding/onboarding_bg_L.png
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/branding/app_icon.png"
+
+  # Android adaptive icon
+  adaptive_icon_background: "#0B0D10"
+  adaptive_icon_foreground: "assets/branding/app_icon.png"

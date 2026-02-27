@@ -1,0 +1,67 @@
+# ---------------------------------
+# Secrets / env
+# ---------------------------------
+.env
+.env.*
+*.env
+
+# ---------------------------------
+# OS / editor
+# ---------------------------------
+.DS_Store
+Thumbs.db
+*.log
+
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+
+# ---------------------------------
+# Dart / Flutter
+# ---------------------------------
+.dart_tool/
+.packages
+.pub/
+.pub-cache/
+.flutter-plugins
+.flutter-plugins-dependencies
+.metadata
+
+build/
+coverage/
+
+# ---------------------------------
+# Android
+# ---------------------------------
+android/.gradle/
+android/local.properties
+android/app/debug/
+android/app/profile/
+android/app/release/
+
+# ---------------------------------
+# iOS / macOS CocoaPods
+# ---------------------------------
+ios/Pods/
+ios/Podfile.lock
+ios/.symlinks/
+ios/Flutter/ephemeral/
+ios/Flutter/.last_build_id
+
+macos/Pods/
+macos/Podfile.lock
+macos/Flutter/ephemeral/
+
+# ---------------------------------
+# Desktop ephemeral
+# ---------------------------------
+linux/flutter/ephemeral/
+windows/flutter/ephemeral/
+
+# ---------------------------------
+# Firebase / functions (Node)
+# ---------------------------------
+functions/node_modules/
+functions/.firebase/
