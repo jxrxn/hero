@@ -54,8 +54,23 @@ flutter run -d "iPhone 16e" --dart-define=SUPERHERO_TOKEN=YOUR_TOKEN
 
 The project follows Separation of Concerns:
 
-lib/ ├── core/ → business logic (combat, utilities) ├── data/ → models,
-API client, repositories ├── presentation → UI, Cubits, routing
+lib/
+├── core/                 # Pure app logic (no UI)
+│   ├── combat/           # Attack/Defense calculations from powerstats
+│   ├── config/           # AppConfig (e.g. image proxy base, token helpers)
+│   └── screen_sizes/     # Responsive helpers (handheld/tablet/web)
+│
+├── data/                 # Data layer (API + persistence)
+│   ├── model/            # DTOs / models (HeroModel etc.)
+│   ├── remote/           # Superhero API client
+│   └── repository/       # Firestore/Auth repositories
+│
+└── presentation/         # UI layer
+├── cubit/                # State management (Cubits + states)
+├── page/                 # Screens/pages (Home, Search, Details, Settings)
+├── router/               # go_router setup + guards
+├── theme/                # Theme + TeamColors extension
+└── widget/               # Reusable UI components (cards, buttons, etc.)
 
 State management: **Cubit (flutter_bloc)**\
 Navigation: **go_router**\
