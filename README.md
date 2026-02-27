@@ -27,9 +27,11 @@ flutter pub get
 
 2) Provide your Superhero API key
 
-Search uses the Superhero API. You need an API key (token).
+Search uses the Superhero API. You need an API key (token), get it here:
 
-We inject it at build time using Flutter’s recommended --dart-define:
+https://superheroapi.com/index.html
+
+Inject it at build time using Flutter’s recommended --dart-define:
 
 ```bash
 flutter run --dart-define=SUPERHERO_TOKEN=YOUR_TOKEN
