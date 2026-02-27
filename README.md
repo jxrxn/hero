@@ -152,7 +152,7 @@ This ensures:
 Attack is calculated using:
 ```
 Attack =  
-(Strength × 0.35)  
+  (Strength × 0.35)  
 + (Power × 0.35)  
 + (Combat × 0.20)  
 + (Speed × 0.10)  
@@ -164,7 +164,7 @@ Attack =
 Defense is calculated using:
 ```
 Defense =  
-(Durability × 0.50)  
+  (Durability × 0.50)  
 + (Speed × 0.20)  
 + (Intelligence × 0.20)  
 + (Combat × 0.10)  
