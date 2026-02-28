@@ -25,7 +25,7 @@ HeroDex 3000 runs on **mobile**, **tablet**, and **web**.
 flutter pub get
 ```
 
-2) Provide your Superhero API key
+### 2) Provide your Superhero API key
 
 Search uses the Superhero API. You need an API key (token), get it here:
 
