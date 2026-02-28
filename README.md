@@ -67,11 +67,11 @@ lib/
 │   └── repository/       # Firestore/Auth repositories
 │
 └── presentation/         # UI layer
-├── cubit/                # State management (Cubits + states)
-├── page/                 # Screens/pages (Home, Search, Details, Settings)
-├── router/               # go_router setup + guards
-├── theme/                # Theme + TeamColors extension
-└── widget/               # Reusable UI components (cards, buttons, etc.)
+    ├── cubit/            # State management (Cubits + states)
+    ├── page/             # Screens/pages (Home, Search, Details, Settings)
+    ├── router/           # go_router setup + guards
+    ├── theme/            # Theme + TeamColors extension
+    └── widget/           # Reusable UI components (cards, buttons, etc.)
 ```
 
 State management: **Cubit (flutter_bloc)**\
