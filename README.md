@@ -98,17 +98,17 @@ startup.
 
 # 🔍 Search
 
--   Debounced API search\
--   Defensive parsing of API data\
--   Card UI with image fallback\
--   Save/remove heroes\
--   Detail view
+-   Debounced API search  
+-   Defensive parsing of API data  
+-   Card UI with image fallback  
+-   Save/remove heroes  
+-   Detail view  
 
 The app never crashes on:
 
--   null values\
--   malformed API responses\
--   network failure
+-   null values  
+-   malformed API responses  
+-   network failure  
 
 All API calls are wrapped in try/catch with controlled UI states.
 
@@ -118,9 +118,9 @@ All API calls are wrapped in try/catch with controlled UI states.
 
 Displays:
 
--   Number of saved characters\
--   Combined strength\
--   Dynamic war status
+-   Number of saved characters  
+-   Combined strength  
+-   Dynamic war status  
 
 Values update reactively from local and remote data.
 
@@ -202,16 +202,16 @@ Implemented through:
 
 # 👨‍💻 Built by
 
-\[JXRXN\]\
-HFL25-2\
+[JXRXN\]  
+HFL25-2  
 2026
 
 ------------------------------------------------------------------------
 
 # 🌍 Final Statement
 
-Even when the network fails.\
-Even when data is malformed.\
-Even when the world shakes.
+Even when the network fails.  
+Even when data is malformed.  
+Even when the world shakes.  
 
 HeroDex remains stable.
