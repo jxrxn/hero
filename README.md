@@ -186,7 +186,7 @@ flutter test
 
 ------------------------------------------------------------------------
 
-# 🛡 Stability Strategy
+# ☔️ Stability Strategy
 
 Implemented through:
 
