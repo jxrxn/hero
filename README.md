@@ -101,7 +101,7 @@ startup and the user can also manually change the settings.
 -   Debounced API search  
 -   Defensive parsing of API data  
 -   Card UI with image fallback  
--   Save/remove heroes  
+-   Click the star to ave/remove heroes  
 -   Detail view  
 
 The app never crashes on:
