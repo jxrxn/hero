@@ -92,7 +92,7 @@ On first launch, users must explicitly choose:
 If declined, those services are fully disabled at runtime.
 
 Firebase initialization respects user consent immediately during app
-startup.
+startup and the user can also manually change the settings.
 
 ------------------------------------------------------------------------
 
