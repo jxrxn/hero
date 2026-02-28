@@ -86,7 +86,7 @@ Business logic is isolated from UI and is fully testable.
 
 On first launch, users must explicitly choose:
 
--   Analytics: Yes / No\
+-   Analytics: Yes / No  
 -   Crashlytics: Yes / No
 
 If declined, those services are fully disabled at runtime.
