@@ -203,9 +203,14 @@ class _SearchPageState extends State<SearchPage> {
                                   final isSaved = state.isSaved(hero.id);
                                   final isSaving = state.isSaving(hero.id);
 
-                                  final alignNorm = normalizeAlign(
-                                    (hero.biography['alignment'] ?? hero.alignment ?? '').toString(),
-                                  );
+                                  final bioAlign = (hero.biography['alignment'] as String?)?.trim();
+
+                                  // HeroModel.alignment är redan icke-null String.
+                                  // Vi tar biography['alignment'] om det finns och inte är tomt,
+                                  // annars använder vi hero.alignment (som i sin tur redan faller tillbaka till '').
+                                  final rawAlign = (bioAlign == null || bioAlign.isEmpty) ? hero.alignment : bioAlign;
+
+                                  final alignNorm = normalizeAlign(rawAlign);
                                   final accent = _alignmentAccent(team, alignNorm);
 
                                   final borderColor = (alignNorm == 'good' || alignNorm == 'bad')
@@ -338,8 +343,9 @@ class _SearchPageState extends State<SearchPage> {
   String _subtitleFor(dynamic hero) {
     try {
       final strength = hero.powerstats?.strength ?? hero.strength ?? 0;
-      final alignment = hero.biography?.alignment ?? hero.alignment ?? '';
-      final a = alignment.toString().trim().isEmpty ? 'unknown' : alignment;
+      final bioAlign = (hero.biography['alignment'] as String?)?.trim();
+      final rawAlign = (bioAlign == null || bioAlign.isEmpty) ? hero.alignment : bioAlign;
+      final a = normalizeAlign(rawAlign);
       return 'Strength: $strength • Alignment: $a';
     } catch (_) {
       return 'Tap for details';
@@ -503,13 +509,6 @@ class _Thumb extends StatelessWidget {
       ),
     );
   }
-}
-
-String _normalizeAlign(String raw) {
-  final a = raw.toLowerCase().trim();
-  if (a.contains('good')) return 'good';
-  if (a.contains('bad') || a.contains('evil')) return 'bad';
-  return 'neutral';
 }
 
 Color _alignmentAccent(TeamColors team, String alignment) {
